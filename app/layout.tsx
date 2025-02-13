@@ -1,6 +1,7 @@
 import { ThemeProvider } from 'next-themes';
 import './globals.css';
 import localFont from 'next/font/local';
+import { Analytics } from '@vercel/analytics/next';
 
 const noveoLocal = localFont({
   src: '/fonts/NoveoSans-Book.ttf',
@@ -35,6 +36,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           {children}
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
