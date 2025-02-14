@@ -40,6 +40,7 @@ body {
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
   }
+
   .dark {
     --background: 240, 6%, 10%;
     --foreground: 0 0% 98%;
@@ -72,6 +73,7 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -99,4 +101,29 @@ body {
   -webkit-mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 0));
   mask-image: linear-gradient(to bottom, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 0));
   transition: opacity 0.3s ease, -webkit-mask-image 0.3s ease;
+}
+
+:root {
+  --stagger: 0;
+  --delay: 70ms;
+  --start: 0ms;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-animated] {
+    animation: enter .6s both;
+    animation-delay: calc(var(--stagger) * var(--delay) + var(--start));
+  }
+}
+
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

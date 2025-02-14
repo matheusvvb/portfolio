@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Links = () => {
   return (
-    <div className='flex flex-col gap-4 w-full'>
+    <div className='flex flex-col gap-4 w-full [--stagger:6]' data-animated>
       <div className="flex flex-row gap-4">
         <a
           href="mailto:hi@matheus.bar"
