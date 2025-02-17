@@ -6,7 +6,7 @@ const Links = () => {
     <div className='flex flex-col gap-4 w-full [--stagger:6]' data-animated>
       <div className="flex flex-row gap-4">
         <a
-          href="mailto:hi@matheus.bar"
+          href="mailto:matheusvvb@gmail.com"
           target="_blank"
           className="group flex flex-row items-center mr-2 text-muted-foreground"
         >
